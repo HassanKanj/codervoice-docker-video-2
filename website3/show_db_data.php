@@ -11,7 +11,7 @@
     $query  = "SELECT * FROM test_database.random_numbers_tbl ORDER BY id ASC";
     $result = dbQuery($query, $connection);
 
-    echo "<table class='table' style='width:400px; margin-top:30px; margin-left:30px;'> <thead class='thead-dark'><tr><th>ID</th><th>random_number</th></thead><tbody>";
+    echo "<table class='table' style='width:400px; margin-top:30px; margin-left:30px;'> <thead class='thead-dark'><tr><th>ID</th><th>random_number</th></tr></thead><tbody>";
     while($row = $result->fetch_assoc()) {
        echo "<tr><td>{$row['id']}</td><td>{$row['random_number']}</td>";
     }
